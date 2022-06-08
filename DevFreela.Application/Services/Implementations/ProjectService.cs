@@ -18,14 +18,6 @@ namespace DevFreela.Application.Services.Implementations
             _dbContext = dbContext;
         }
 
-        public void Finish(int id)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
-
-            project.Finish();
-            _dbContext.SaveChanges();
-        }
-
         public List<ProjectViewModel> GetAll(string query)
         {
             var project = _dbContext.Projects;

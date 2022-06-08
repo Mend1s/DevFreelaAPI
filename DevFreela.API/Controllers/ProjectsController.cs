@@ -2,6 +2,7 @@
 using DevFreela.Application.Commands.CreateComment;
 using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Commands.DeleteProject;
+using DevFreela.Application.Commands.FinishProject;
 using DevFreela.Application.Commands.UpdateProject;
 using DevFreela.Application.Services.Interfaces;
 using MediatR;
@@ -99,9 +100,12 @@ namespace DevFreela.API.Controllers
 
         // api/projects/1/finish
         [HttpPut("{id}/finish")]
-        public IActionResult Finish(int id)
+        public async Task<IActionResult> Finish(int id)
         {
-            _projectService.Finish(id);
+            var command = new FinishProjectCommand(id);
+            
+            await _mediator.Send(command);
+            
             return NoContent();
         }
     }
