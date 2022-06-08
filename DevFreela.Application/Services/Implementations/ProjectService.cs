@@ -50,14 +50,5 @@ namespace DevFreela.Application.Services.Implementations
                 );
             return projecDetailsViewModel;
         }
-
-        public void Start(int id)
-        {
-            var project = _dbContext.Projects.SingleOrDefault(p => p.Id == id);
-
-            project.Start();
-            _dbContext.SaveChanges();
-        }
-
     }
 }
