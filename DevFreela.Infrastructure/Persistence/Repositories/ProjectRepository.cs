@@ -19,5 +19,13 @@ namespace DevFreela.Infrastructure.Persistence.Repositories
         {
             return await _dbContext.Projects.ToListAsync();
         }
+
+        public async Task<Project> GetDetailsByIdAsync(int id)
+        {
+            return await _dbContext.Projects
+            .Include(p => p.Client)
+            .Include(p => p.Freelancer)
+            .SingleOrDefaultAsync(p => p.Id == id);
+        }
     }
 }
