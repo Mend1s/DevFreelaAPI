@@ -2,7 +2,7 @@
 
 namespace DevFreela.Application.Commands.FinishProject
 {
-    public class FinishProjectCommand : IRequest<int>
+    public class FinishProjectCommand : IRequest<Unit>
     {
         public FinishProjectCommand(int id)
         {

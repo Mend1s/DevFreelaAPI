@@ -2,7 +2,7 @@
 
 namespace DevFreela.Application.Commands.StartProject
 {
-    public class StartProjectCommand : IRequest<int>
+    public class StartProjectCommand : IRequest<Unit>
     {
         public int Id { get; set; }
 

@@ -3,11 +3,6 @@ using DevFreela.Core.DTOs;
 using DevFreela.Core.Repositories;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevFreela.Infrastructure.Persistence.Repositories
 {
@@ -18,7 +13,8 @@ namespace DevFreela.Infrastructure.Persistence.Repositories
         {
             _connectionString = configuration.GetConnectionString("DevFreelaCs");
         }
-        public async Task<List<SkillDTO>> GetAll()
+
+        public async Task<List<SkillDTO>> GetAllAsync()
         {
             using (var sqlConnection = new SqlConnection(_connectionString))
             {
