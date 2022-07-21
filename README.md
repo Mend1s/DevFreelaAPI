@@ -21,6 +21,8 @@ O DevFreela é uma API para implementar as funcionalidades necessárias para um 
 ## Documentação da API
 
  Utilizado o Swagger para documentar os EndPoints desenvolvidos e auxiliar nos testes da API graças a sua interface gráfica.
+ 
+![swagger-curso](https://user-images.githubusercontent.com/61983373/180330650-7c0a68b1-54d3-492a-9def-3c622d21d42f.jpg)
 
 ## Referência
 
