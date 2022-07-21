@@ -1,8 +1,7 @@
 
 # DevFreela - API
 
-Plataforma para cadastro e contratação de serviços de freelance de desenvolvedores.
-
+O DevFreela é uma API para implementar as funcionalidades necessárias para um sistema de freelance. Tendo as seguintes funcionalidades: Cadastro, Atualização, Cancelamento, e Consulta de Serviço de Freelance. Cadastro de Usuário e de perfis de Freelancer e Cliente. Adicionar comentários para um serviço de Freelance. Definir, iniciar e finalizar projeto
 ## Tecnologias e práticas utilizadas
 
 - API desenvolvida com .NET 6
